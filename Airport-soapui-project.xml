@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="504590b4-0c19-4df4-8414-8c88a9c5c642" activeEnvironment="Default" name="Airport" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@shadowPassword"/></con:settings><con:interface xsi:type="con:WsdlInterface" id="50de16cf-d33a-4429-b93b-afde4065c14f" wsaVersion="NONE" name="airportSoap" type="wsdl" bindingName="{http://www.webserviceX.NET}airportSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/airport.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint></con:endpoints><con:operation id="b3f9880d-885c-4301-9dfa-b80e84446759" isOneWay="false" action="http://www.webserviceX.NET/getAirportInformationByAirportCode" name="getAirportInformationByAirportCode" bindingOperationName="getAirportInformationByAirportCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="561343dd-7c7f-4fcb-a60e-ba0900b603f5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:getAirportInformationByAirportCode>\r
+         <!--Optional:-->\r
+         <web:airportCode>LHR</web:airportCode>\r
+      </web:getAirportInformationByAirportCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/getAirportInformationByAirportCode"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6a898e00-d856-49c6-b502-b540007ae860" isOneWay="false" action="http://www.webserviceX.NET/getAirportInformationByCityOrAirportName" name="getAirportInformationByCityOrAirportName" bindingOperationName="getAirportInformationByCityOrAirportName" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4941ae9c-ffc9-464b-bceb-00971be47a7e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/getAirportInformationByCityOrAirportName"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="32f2cc1d-e689-4f74-8e46-3bb2f0fbe7f3" isOneWay="false" action="http://www.webserviceX.NET/GetAirportInformationByCountry" name="GetAirportInformationByCountry" bindingOperationName="GetAirportInformationByCountry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9769bb8a-d69c-48e5-a9e2-975b49817d1f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:GetAirportInformationByCountry>\r
+         <!--Optional:-->\r
+         <web:country>?</web:country>\r
+      </web:GetAirportInformationByCountry>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/GetAirportInformationByCountry"/></con:call></con:operation><con:operation id="724483dc-b771-45ea-886e-d185470118b0" isOneWay="false" action="http://www.webserviceX.NET/getAirportInformationByISOCountryCode" name="getAirportInformationByISOCountryCode" bindingOperationName="getAirportInformationByISOCountryCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="85367f75-f82a-42a3-8ea1-96f19352c0a4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:getAirportInformationByISOCountryCode>\r
+         <!--Optional:-->\r
+         <web:CountryAbbrviation>?</web:CountryAbbrviation>\r
+      </web:getAirportInformationByISOCountryCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/getAirportInformationByISOCountryCode"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="b5087ac6-7ba5-4911-9265-ca95df95b941" wsaVersion="NONE" name="airportSoap12" type="wsdl" bindingName="{http://www.webserviceX.NET}airportSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.webservicex.net/airport.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/airport.asmx?wsdl"><con:part><con:url>http://www.webservicex.net/airport.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET">
+      <s:element name="getAirportInformationByISOCountryCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CountryAbbrviation" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAirportInformationByISOCountryCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAirportInformationByISOCountryCodeResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAirportInformationByCityOrAirportName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cityOrAirportName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAirportInformationByCityOrAirportNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAirportInformationByCityOrAirportNameResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAirportInformationByCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAirportInformationByCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAirportInformationByCountryResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAirportInformationByAirportCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="airportCode" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAirportInformationByAirportCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAirportInformationByAirportCodeResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getAirportInformationByISOCountryCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:getAirportInformationByISOCountryCode"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByISOCountryCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:getAirportInformationByISOCountryCodeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByCityOrAirportNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getAirportInformationByCityOrAirportName"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByCityOrAirportNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getAirportInformationByCityOrAirportNameResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetAirportInformationByCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAirportInformationByCountry"/>
+  </wsdl:message>
+  <wsdl:message name="GetAirportInformationByCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAirportInformationByCountryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByAirportCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:getAirportInformationByAirportCode"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByAirportCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:getAirportInformationByAirportCodeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByISOCountryCodeHttpGetIn">
+    <wsdl:part name="CountryAbbrviation" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByISOCountryCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByCityOrAirportNameHttpGetIn">
+    <wsdl:part name="cityOrAirportName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByCityOrAirportNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAirportInformationByCountryHttpGetIn">
+    <wsdl:part name="country" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAirportInformationByCountryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByAirportCodeHttpGetIn">
+    <wsdl:part name="airportCode" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByAirportCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByISOCountryCodeHttpPostIn">
+    <wsdl:part name="CountryAbbrviation" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByISOCountryCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByCityOrAirportNameHttpPostIn">
+    <wsdl:part name="cityOrAirportName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByCityOrAirportNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAirportInformationByCountryHttpPostIn">
+    <wsdl:part name="country" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetAirportInformationByCountryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByAirportCodeHttpPostIn">
+    <wsdl:part name="airportCode" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAirportInformationByAirportCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:portType name="airportSoap">
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by ISO country code</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByISOCountryCodeSoapIn"/>
+      <wsdl:output message="tns:getAirportInformationByISOCountryCodeSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by city or airport name</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByCityOrAirportNameSoapIn"/>
+      <wsdl:output message="tns:getAirportInformationByCityOrAirportNameSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by country name</wsdl:documentation>
+      <wsdl:input message="tns:GetAirportInformationByCountrySoapIn"/>
+      <wsdl:output message="tns:GetAirportInformationByCountrySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by airport code</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByAirportCodeSoapIn"/>
+      <wsdl:output message="tns:getAirportInformationByAirportCodeSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="airportHttpGet">
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by ISO country code</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByISOCountryCodeHttpGetIn"/>
+      <wsdl:output message="tns:getAirportInformationByISOCountryCodeHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by city or airport name</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByCityOrAirportNameHttpGetIn"/>
+      <wsdl:output message="tns:getAirportInformationByCityOrAirportNameHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by country name</wsdl:documentation>
+      <wsdl:input message="tns:GetAirportInformationByCountryHttpGetIn"/>
+      <wsdl:output message="tns:GetAirportInformationByCountryHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by airport code</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByAirportCodeHttpGetIn"/>
+      <wsdl:output message="tns:getAirportInformationByAirportCodeHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="airportHttpPost">
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by ISO country code</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByISOCountryCodeHttpPostIn"/>
+      <wsdl:output message="tns:getAirportInformationByISOCountryCodeHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by city or airport name</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByCityOrAirportNameHttpPostIn"/>
+      <wsdl:output message="tns:getAirportInformationByCityOrAirportNameHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by country name</wsdl:documentation>
+      <wsdl:input message="tns:GetAirportInformationByCountryHttpPostIn"/>
+      <wsdl:output message="tns:GetAirportInformationByCountryHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <wsdl:documentation>Get Airport Code, CityOrAirport Name, Country, Country Abbrv, CountryCode,GMT Offset Runway Length in Feet, Runway Elevation in Feet,Latitude in Degree,Latitude in Minute Latitude in Second,Latitude in N/S, Longitude in Degree, Longitude in Minute, Longitude in Seconds and longitude E/W by airport code</wsdl:documentation>
+      <wsdl:input message="tns:getAirportInformationByAirportCodeHttpPostIn"/>
+      <wsdl:output message="tns:getAirportInformationByAirportCodeHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="airportSoap" type="tns:airportSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <soap:operation soapAction="http://www.webserviceX.NET/getAirportInformationByISOCountryCode" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <soap:operation soapAction="http://www.webserviceX.NET/getAirportInformationByCityOrAirportName" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <soap:operation soapAction="http://www.webserviceX.NET/GetAirportInformationByCountry" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <soap:operation soapAction="http://www.webserviceX.NET/getAirportInformationByAirportCode" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="airportSoap12" type="tns:airportSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <soap12:operation soapAction="http://www.webserviceX.NET/getAirportInformationByISOCountryCode" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <soap12:operation soapAction="http://www.webserviceX.NET/getAirportInformationByCityOrAirportName" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <soap12:operation soapAction="http://www.webserviceX.NET/GetAirportInformationByCountry" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <soap12:operation soapAction="http://www.webserviceX.NET/getAirportInformationByAirportCode" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="airportHttpGet" type="tns:airportHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <http:operation location="/getAirportInformationByISOCountryCode"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <http:operation location="/getAirportInformationByCityOrAirportName"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <http:operation location="/GetAirportInformationByCountry"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <http:operation location="/getAirportInformationByAirportCode"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="airportHttpPost" type="tns:airportHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="getAirportInformationByISOCountryCode">
+      <http:operation location="/getAirportInformationByISOCountryCode"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByCityOrAirportName">
+      <http:operation location="/getAirportInformationByCityOrAirportName"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAirportInformationByCountry">
+      <http:operation location="/GetAirportInformationByCountry"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAirportInformationByAirportCode">
+      <http:operation location="/getAirportInformationByAirportCode"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="airport">
+    <wsdl:port name="airportSoap" binding="tns:airportSoap">
+      <soap:address location="http://www.webservicex.net/airport.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="airportSoap12" binding="tns:airportSoap12">
+      <soap12:address location="http://www.webservicex.net/airport.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="airportHttpGet" binding="tns:airportHttpGet">
+      <http:address location="http://www.webservicex.net/airport.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="airportHttpPost" binding="tns:airportHttpPost">
+      <http:address location="http://www.webservicex.net/airport.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint></con:endpoints><con:operation id="cda07de5-57e0-4ae0-88fc-75a0be186def" isOneWay="false" action="http://www.webserviceX.NET/getAirportInformationByAirportCode" name="getAirportInformationByAirportCode" bindingOperationName="getAirportInformationByAirportCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0226ff69-286e-4bde-bc8e-6a697f9ae885" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:getAirportInformationByAirportCode>\r
+         <!--Optional:-->\r
+         <web:airportCode>?</web:airportCode>\r
+      </web:getAirportInformationByAirportCode>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/airportSoap/getAirportInformationByAirportCodeRequest"/></con:call></con:operation><con:operation id="73057849-8147-458d-932b-36b9de549505" isOneWay="false" action="http://www.webserviceX.NET/getAirportInformationByCityOrAirportName" name="getAirportInformationByCityOrAirportName" bindingOperationName="getAirportInformationByCityOrAirportName" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c0b9f6b5-2421-4ea2-9aa5-541db63e1818" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:getAirportInformationByCityOrAirportName>\r
+         <!--Optional:-->\r
+         <web:cityOrAirportName>?</web:cityOrAirportName>\r
+      </web:getAirportInformationByCityOrAirportName>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/airportSoap/getAirportInformationByCityOrAirportNameRequest"/></con:call></con:operation><con:operation id="e56cc1cd-f87c-4176-8a58-35f346b1b42e" isOneWay="false" action="http://www.webserviceX.NET/GetAirportInformationByCountry" name="GetAirportInformationByCountry" bindingOperationName="GetAirportInformationByCountry" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd4f0bdc-5513-440c-8794-dbb467d212c5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:GetAirportInformationByCountry>\r
+         <!--Optional:-->\r
+         <web:country>?</web:country>\r
+      </web:GetAirportInformationByCountry>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/airportSoap/GetAirportInformationByCountryRequest"/></con:call></con:operation><con:operation id="b58a4563-9d39-4cda-9473-0d36b7898a55" isOneWay="false" action="http://www.webserviceX.NET/getAirportInformationByISOCountryCode" name="getAirportInformationByISOCountryCode" bindingOperationName="getAirportInformationByISOCountryCode" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dbcfa599-459e-4a48-8f99-da555021b9d0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:getAirportInformationByISOCountryCode>\r
+         <!--Optional:-->\r
+         <web:CountryAbbrviation>?</web:CountryAbbrviation>\r
+      </web:getAirportInformationByISOCountryCode>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/airportSoap/getAirportInformationByISOCountryCodeRequest"/></con:call></con:operation></con:interface><con:testSuite id="b5442088-21bd-423e-a91b-ce1dda7f7c61" name="TS01"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="777a66f7-38fb-40e4-9c1c-4a69f82e75fc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01" searchProperties="true"><con:settings/><con:testStep type="request" id="9f0f570c-9933-474c-89d1-8c51746f0e51" name="AirportCode - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>airportSoap</con:interface><con:operation>getAirportInformationByAirportCode</con:operation><con:request name="AirportCode - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="1b2259a1-0cbe-4a31-b3ac-7df82387bf0c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/airport.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:getAirportInformationByAirportCode>\r
+         <!--Optional:-->\r
+         <web:airportCode>${#TestCase#airportCode}</web:airportCode>\r
+      </web:getAirportInformationByAirportCode>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4405b3c0-b8d6-48a8-9c6b-38217cd7f692" name="SOAP Response"/><con:assertion type="XPath Match" id="d78ba52b-d5d6-415f-9c5b-c6139981e872" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://www.webserviceX.NET';
+//ns1:getAirportInformationByAirportCodeResponse/ns1:getAirportInformationByAirportCodeResult/text()</path><content><![CDATA[<NewDataSet>
+  <Table>
+    <AirportCode>LHR</AirportCode>
+    <CityOrAirportName>LONDON HEATHROW</CityOrAirportName>
+    <Country>Great Britain (UK)</Country>
+    <CountryAbbrviation>GB</CountryAbbrviation>
+    <CountryCode>493</CountryCode>
+    <GMTOffset>0</GMTOffset>
+    <RunwayLengthFeet>12802</RunwayLengthFeet>
+    <RunwayElevationFeet>80</RunwayElevationFeet>
+    <LatitudeDegree>51</LatitudeDegree>
+    <LatitudeMinute>28</LatitudeMinute>
+    <LatitudeSecond>0</LatitudeSecond>
+    <LatitudeNpeerS>N</LatitudeNpeerS>
+    <LongitudeDegree>0</LongitudeDegree>
+    <LongitudeMinute>27</LongitudeMinute>
+    <LongitudeSeconds>0</LongitudeSeconds>
+    <LongitudeEperW>W</LongitudeEperW>
+  </Table>
+  <Table>
+    <AirportCode>LHR</AirportCode>
+    <CityOrAirportName>LONDON HEATHROW</CityOrAirportName>
+    <Country>Great Britain (UK)</Country>
+    <CountryAbbrviation>GB</CountryAbbrviation>
+    <CountryCode>493</CountryCode>
+    <GMTOffset>0</GMTOffset>
+    <RunwayLengthFeet>12802</RunwayLengthFeet>
+    <RunwayElevationFeet>80</RunwayElevationFeet>
+    <LatitudeDegree>51</LatitudeDegree>
+    <LatitudeMinute>28</LatitudeMinute>
+    <LatitudeSecond>0</LatitudeSecond>
+    <LatitudeNpeerS>N</LatitudeNpeerS>
+    <LongitudeDegree>0</LongitudeDegree>
+    <LongitudeMinute>27</LongitudeMinute>
+    <LongitudeSeconds>0</LongitudeSeconds>
+    <LongitudeEperW>W</LongitudeEperW>
+  </Table>
+</NewDataSet>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="5d84da60-8ae1-4fab-8cd5-ff312ccc0e2a" name="Script Assertion"><con:configuration><scriptText>//extract the webservice response
+import groovy.util.XmlSlurper
+def cdata=context.expand('${AirportCode - Request 1#Response#declare namespace ns1=\'http://www.webserviceX.NET\'//ns1:getAirportInformationByAirportCodeResponse/ns1:getAirportInformationByAirportCodeResult/text()}')
+log.info cdata
+//read the airport code and assert the value
+
+XmlSlurper xmlSlurper= new XmlSlurper()
+def xmlData=xmlSlurper.parseText(cdata)
+String airportCode=xmlData.Table[0].AirportCode
+assert airportCode == 'LHR'
+</scriptText></con:configuration></con:assertion><con:credentials><con:username>$(#Project#username)</con:username><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/getAirportInformationByAirportCode"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="8cc869ec-95bb-4d58-a2d8-5d104338fec9"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>airportCode</con:name></con:property></con:properties></con:config></con:testStep><con:properties><con:property><con:name>airportCode</con:name><con:value>LHR</con:value></con:property><con:property><con:name>TestCase</con:name><con:value/></con:property><con:property><con:name>TestSuite</con:name><con:value/></con:property><con:property><con:name>Porject</con:name><con:value/></con:property><con:property><con:name>Global</con:name><con:value/></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>username</con:name><con:value>ketan</con:value></con:property><con:property><con:name>password</con:name><con:value>abc</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
