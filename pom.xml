@@ -31,7 +31,7 @@
 						<id>My Project test cases</id>
 						<configuration>
 						<!--ENTER YOUR PROJECT LOCATION HERE -->
-							<projectFile></projectFile>
+							<projectFile>C:\Users\ab42596\Desktop\Jenkins\Swagger</projectFile>
 							<outputFolder>target/surefire-reports</outputFolder>
 							<junitReport>true</junitReport>
 							<exportwAll>true</exportwAll>
