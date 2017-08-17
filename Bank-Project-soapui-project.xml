@@ -996,7 +996,7 @@
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.sforce.com/schemas/class/Ws_EM/Ws_EMPortType/UpdateEBOFOrderInfoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="80786ce5-320c-42b0-8757-6a207e300d5a" name="TS01"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4290cb22-b637-42d8-afa7-391c0770f722" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01" searchProperties="true"><con:settings/><con:testStep type="request" id="65dd5c85-b9a9-4b83-ae07-fe75afc06814" name="getBank - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="417692bd-c8d8-4e85-8db9-be027fc6b1a9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request/><con:assertion type="XPath Match" id="60da3076-7e51-4241-ab61-0cea3da53187" name="Validate bic code"><con:configuration><path>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns1='http://thomas-bayer.com/blz/';
-//ns1:getBankResponse/ns1:details/ns1:bic</path><content>ESSEDE5F550</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="050c8364-71c3-4cbc-bb97-2e72d80ee9a8" name="SOAP Response"/><con:assertion type="Schema Compliance" id="bd026682-cc66-4e8c-8bd8-2d5be9d1596d" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="9367d77a-db48-43c6-9197-dd963f494423" name="Not SOAP Fault"/><con:assertion type="XQuery Match" id="d2cf3e1e-08f2-448b-92bb-690df034161a" name="XQuery Match"><con:configuration/></con:assertion><con:assertion type="XPath Match" id="4725e3ca-31a9-41be-8bf1-f3f864d1e88f" name="XPath Match"><con:configuration/></con:assertion><con:assertion type="XPath Match"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://thomas-bayer.com/blz/BLZServicePortType/getBankRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="90168012-706b-443e-9423-170f7a7aeb7d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transfer_blzCode</con:name><con:sourceType>blzCode</con:sourceType><con:sourceStep>#TestCase#</con:sourceStep><con:targetType>blzCode</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transfer_bicCode</con:name><con:sourceType xsi:nil="true"/><con:sourceStep>getBank - Request 1</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+//ns1:getBankResponse/ns1:details/ns1:bic</path><content>ESSEDE5F550</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="050c8364-71c3-4cbc-bb97-2e72d80ee9a8" name="SOAP Response"/><con:assertion type="Schema Compliance" id="bd026682-cc66-4e8c-8bd8-2d5be9d1596d" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="9367d77a-db48-43c6-9197-dd963f494423" name="Not SOAP Fault"/><con:assertion type="XQuery Match" id="d2cf3e1e-08f2-448b-92bb-690df034161a" name="XQuery Match"><con:configuration/></con:assertion><con:assertion type="XPath Match" id="4725e3ca-31a9-41be-8bf1-f3f864d1e88f" name="XPath Match"><con:configuration/></con:assertion><con:assertion type="XPath Match" id="df9d23bc-36af-46d6-8d00-52830fd349c5"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://thomas-bayer.com/blz/BLZServicePortType/getBankRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="90168012-706b-443e-9423-170f7a7aeb7d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transfer_blzCode</con:name><con:sourceType>blzCode</con:sourceType><con:sourceStep>#TestCase#</con:sourceStep><con:sourcePath/><con:targetType xsi:nil="true"/><con:targetStep>#TestSuite#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transfer_bicCode</con:name><con:sourceType xsi:nil="true"/><con:sourceStep>getBank - Request 1</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns1='http://thomas-bayer.com/blz/';
 //ns1:getBankResponse/ns1:details/ns1:bic</con:sourcePath><con:targetType>bicCode</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transfer_ort</con:name><con:sourceType xsi:nil="true"/><con:sourceStep>getBank - Request 1</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns1='http://thomas-bayer.com/blz/';
@@ -1076,4 +1076,222 @@ return
     <zip>75070</zip>
     <city>MCKINNEY</city>
   </testsupplier>
-</test>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>true</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierByZipCode"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="27404165-da54-47e0-b794-89b2066d20b5" name="TS03-Groovy Automation"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</test>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>true</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierByZipCode"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="27404165-da54-47e0-b794-89b2066d20b5" name="TS03-Groovy Automation"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="33be7193-c41a-45bd-9f30-9e8f6ec33551" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01_Data Type ,Log,$" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Data Types" id="5359e4cf-77a5-42ed-8982-f4826a40dfea"><con:settings/><con:config><script>def name
+String firstName
+int age
+double salary
+String country
+
+age=26
+firstName='Ketan'
+salary=1100000
+country = 'India'
+
+log.info firstName
+log.warn age
+log.error salary
+
+log.info "Country = $country"</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="cb3ffb04-82d8-4b03-97e6-536ec44f8a85" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC02-Conditions" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="72e064a1-5e9b-4635-aa56-7165bd1010c8"><con:settings/><con:config><script>boolean isPassed
+String grade
+
+ifPassed=true
+
+if(isPassed==true){
+log.info "Congratulations"
+}
+else
+{
+
+log.info "At least you didn't cheat"	
+}
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="89c9a92b-852a-4bc9-a251-58b7513b8ee7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC03-List" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="6346ce7d-12cf-49ba-9ac7-fee900b958b9"><con:settings/><con:config><script>
+
+def fruits = ['Apple','Banana','Grapes']
+
+fruits.each{
+	fruitName -> 
+	log.info fruitName
+}
+
+//contains
+
+boolean b = fruits.contains('Papaya')
+
+if(b)
+{
+log.info b	
+}
+
+else
+{
+	log.warn false
+}
+
+
+//adding to list
+
+fruits.add('Papaya')
+fruits &lt;&lt; 'Mango'
+
+log.info fruits
+
+
+//remove from list
+
+fruits.remove('Apple')
+log.info fruits</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ac7e4eb0-d524-493d-840a-c2703bfbb1a5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC04-Maps" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="80ec7a7f-ff61-40c5-9333-bc50cc42ccb9"><con:settings/><con:config><script>def countries = ['IND': 'INDIA','US':'USA']
+
+log.info countries.containsKey('IND')
+log .info countries.get('IND')
+countries.put('GB','Great Britain')
+
+log.info countries
+
+countries.each{
+	country ->
+	log.info country
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2128bd26-b13f-4e83-949c-d9fb3a17e20e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC05-Assertions" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="e0e827b9-b83d-4078-b5ab-1811e0e7b8db"><con:settings/><con:config><script>String expected,actual
+
+expected = 'john'
+actual='jhon'
+
+//assert expected == actual
+
+fruits = ['apple','banana']
+
+assert true == fruits.contains('Mango'),"My unique Message"</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3f172781-3eeb-4cd5-9f5a-a239a3b4defe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC06-testRunner.testCase.testSuite.project.workspace.name" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="0b6f3fac-1b98-4613-befd-d1a051959d30"><con:settings/><con:config><script>//test case name
+log.info testRunner.testCase.name
+
+//test suite name
+log.info testRunner.testCase.testSuite.name
+
+//test Project name
+log.info testRunner.testCase.testSuite.project.name
+
+//test Workspace name
+log.info testRunner.testCase.testSuite.project.workspace.name
+
+//run Test Case from another Test Suite
+log.info testRunner.
+testCase.
+testSuite.
+project.
+getTestSuiteByName('TS02-Test Suite for supplier service').
+getTestCaseByName('TC01').name
+
+
+//print all Test Suite
+def testSuiteMap=testRunner.testCase.testSuite.project.testSuites
+
+testSuiteMap.each{
+tsEntry ->
+log.info tsEntry.key 
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f731dae8-efa3-462f-b2ae-72cad161b410" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC07-import groovy.util.XmlSlurper" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="a3004d7e-b75e-4e00-ac02-88320caad94c"><con:settings/><con:config><script>import groovy.util.XmlSlurper
+//Define Test Step
+//Define xmlslurper
+
+ //testRunner
+ //run(testRunner,context)
+ //contentASXml
+ 
+def testStepName='getBank'
+def xml = new XmlSlurper()
+
+def testStep=testRunner.testCase.getTestStepByName(testStepName)
+def response=testStep.run(testRunner,context)
+
+
+def Envelope=xml.parseText(response.responseContentAsXml)
+log.info Envelope
+log.info Envelope.Body.getBankResponse.details.bic
+
+</script></con:config></con:testStep><con:testStep type="request" id="392e2b4e-ce4e-440a-9774-00fdb61954b3" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71aa8b0c-bfdf-4c05-9a0b-7b8b70f41abc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <blz:getBank>\r
+         <blz:blz>55010111</blz:blz>\r
+      </blz:getBank>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="14f47160-e6cf-4b81-8989-21bef55fc8b8" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://thomas-bayer.com/blz/BLZServicePortType/getBankRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ddd385e9-6b5e-49b4-bf9d-5c86ecd8f3cd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC08-Working With File" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="67545314-47dd-4f7b-80ce-cffb67b2ddee"><con:settings/><con:config><script>File file = new File("C:\\Users\\ab42596\\Desktop\\blz-service-data.txt")
+//eacLine
+//line
+//l=l.split(',')
+file.eachLine{
+	line ->
+	//log.info line
+	def l = line.split(',')
+	log.info l[0] // blzcode
+	log.info l[1] //bezeichnung
+	log.info l[2] //bic
+	log.info l[3] //ort
+	log.info l[4] //plz
+}
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9ac826e7-c6e5-41c1-83e1-1657cd6d0b9c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC09-Data Driven testing using Groovy" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="6358464a-ab3e-40a4-afd0-0c26d6a98f2f"><con:settings/><con:config><script>import com.eviware.soapui.support.GroovyUtils
+def requestXmlHolder,responseXmlHolder
+def groovyUtils= new GroovyUtils(context)
+
+//Read the bank service data from file
+File file = new File("C:\\Users\\ab42596\\Desktop\\blz-service-data.txt")
+def blzcode
+file.eachLine{
+	line ->
+	//log.info line
+	def l = line.split(',')
+	blzcode= l[0] // blzcode
+	fbezeichnung=l[1]
+
+//updating the request with blzcode
+requestXmlHolder=groovyUtils.getXmlHolder("getBank#Request")
+requestXmlHolder["//blz:blz"]=blzcode
+requestXmlHolder.updateProperty()
+
+//Run request
+testRunner.testCase.getTestStepByName('getBank').run(testRunner,context)
+
+//Storing the response of bezeichnung bic ort plz
+responseXmlHolder=groovyUtils.getXmlHolder("getBank#Response")
+def test= responseXmlHolder["//ns1:bezeichnung"]
+log.info " $blzcode : $fbezeichnung"
+assert test == fbezeichnung,"$blzcode"
+//write assertion
+}
+
+
+
+
+
+
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="request" id="339c9af3-934b-471e-a349-4a1a4897bee2" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5abab871-ebb5-475f-a52d-8684e257dad7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <blz:getBank>
+         <blz:blz>55020500</blz:blz>
+      </blz:getBank>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c9998909-a7af-483b-958a-d06fad88e6bf" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://thomas-bayer.com/blz/BLZServicePortType/getBankRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="27cd82c4-198f-4f02-897f-73285febc730" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC10-Read data from Excel" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="2846cb5c-9f71-4f7b-bff1-b431aaf2923b"><con:settings/><con:config><script>import jxl.*
+
+File f =new File("C:\\Users\\ab42596\\Desktop\\Data-for-BLZService.xls")
+//Create workbook instance
+Workbook wb=Workbook.getWorkbook(f)
+//Load the sheet
+Sheet sheet=wb.getSheet(0)
+//i want to read the data in the sheet
+int noOfRows=sheet.getRows()-1
+//loop through the records
+for(int rowIdx in 1..noOfRows){	
+	//sheet.getCell(col index,row index)
+	
+	log.info sheet.getCell(0,rowIdx).getContents()
+	log.info sheet.getCell(1,rowIdx).getContents()
+}
+wb.close()
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
