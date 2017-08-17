@@ -1294,4 +1294,16 @@ for(int rowIdx in 1..noOfRows){
 	log.info sheet.getCell(1,rowIdx).getContents()
 }
 wb.close()
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8eca5621-4478-4cdd-bb1f-7589e1bc952d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC11-Read from sql" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="f586014f-0d8f-489d-bc08-bc5d54c30791"><con:settings/><con:config><script>import groovy.sql.Sql
+
+String sqlStmt='SELECT * FROM TABL_NAME'
+
+
+def sql=Sql.newInstance('jdbc:mysql:prod_pdb.dev.qintra.com:1535/poim_message_transaction?user=GBUSTEST&amp;password=TESTGBUS','GBUSTEST','TESTGBUS','com.mysql.jdbc.Driver')
+
+sql.eachRow(sqlStmt){
+
+	x ->
+	log.info x['blz_code']
+}
 </script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
