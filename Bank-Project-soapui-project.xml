@@ -1110,8 +1110,8 @@ log.info "At least you didn't cheat"
 def fruits = ['Apple','Banana','Grapes']
 
 fruits.each{
-	x -> 
-	log.info x
+	fruitName -> 
+	log.info fruitName
 }
 
 //contains
@@ -1149,8 +1149,8 @@ countries.put('GB','Great Britain')
 log.info countries
 
 countries.each{
-	x ->
-	log.info x
+	country ->
+	log.info country
 }
 </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2128bd26-b13f-4e83-949c-d9fb3a17e20e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC05-Assertions" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="e0e827b9-b83d-4078-b5ab-1811e0e7b8db"><con:settings/><con:config><script>String expected,actual
 
@@ -1186,10 +1186,29 @@ getTestCaseByName('TC01').name
 def testSuiteMap=testRunner.testCase.testSuite.project.testSuites
 
 testSuiteMap.each{
-x ->
-log.info x
+tsEntry ->
+log.info tsEntry.key 
 }
-</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f731dae8-efa3-462f-b2ae-72cad161b410" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC07-import groovy.util.XmlSlurper" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="a3004d7e-b75e-4e00-ac02-88320caad94c"><con:settings/><con:config><script/></con:config></con:testStep><con:testStep type="request" id="392e2b4e-ce4e-440a-9774-00fdb61954b3" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71aa8b0c-bfdf-4c05-9a0b-7b8b70f41abc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">\r
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f731dae8-efa3-462f-b2ae-72cad161b410" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC07-import groovy.util.XmlSlurper" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="a3004d7e-b75e-4e00-ac02-88320caad94c"><con:settings/><con:config><script>import groovy.util.XmlSlurper
+//Define Test Step
+//Define xmlslurper
+
+ //testRunner
+ //run(testRunner,context)
+ //contentASXml
+ 
+def testStepName='getBank'
+def xml = new XmlSlurper()
+
+def testStep=testRunner.testCase.getTestStepByName(testStepName)
+def response=testStep.run(testRunner,context)
+
+
+def Envelope=xml.parseText(response.responseContentAsXml)
+log.info Envelope
+log.info Envelope.Body.getBankResponse.details.bic
+
+</script></con:config></con:testStep><con:testStep type="request" id="392e2b4e-ce4e-440a-9774-00fdb61954b3" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71aa8b0c-bfdf-4c05-9a0b-7b8b70f41abc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <blz:getBank>\r
@@ -1301,7 +1320,6 @@ Export JUnit Results:Export all results
 
 "C:\Program Files\SmartBear\SoapUI-5.3.0\bin\testrunner.bat" -s"TS01-Get Put Post Delete" -a -f"C:\Users\ab42596\Desktop\SOAP UI Test Report" "C:\Users\ab42596\Desktop\SoapUI Project\Swagger-soapui-project.xml"
 
-Save as "test.bat"
 
 
 
