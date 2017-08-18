@@ -31,7 +31,7 @@
 						<id>My Project test cases</id>
 						<configuration>
 						<!--ENTER YOUR PROJECT LOCATION HERE -->
-							<projectFile>C:\Users\ab42596\.jenkins\workspace\Maven Bank Project\Swagger-soapui-project.xml</projectFile>
+							<projectFile>Swagger-soapui-project.xml</projectFile>
 							<outputFolder>target/surefire-reports</outputFolder>
 							<junitReport>true</junitReport>
 							<exportwAll>true</exportwAll>
