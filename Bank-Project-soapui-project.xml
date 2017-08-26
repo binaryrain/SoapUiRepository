@@ -1002,81 +1002,25 @@ declare namespace ns1='http://thomas-bayer.com/blz/';
 declare namespace ns1='http://thomas-bayer.com/blz/';
 //ns1:getBankResponse/ns1:details/ns1:ort</con:sourcePath><con:targetType>ort</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>transer_plz</con:name><con:sourceType xsi:nil="true"/><con:sourceStep>getBank - Request 1</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns1='http://thomas-bayer.com/blz/';
-//ns1:getBankResponse/ns1:details/ns1:plz</con:sourcePath><con:targetType>plz</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="823c9db9-879a-4149-8118-3c8210179f84"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>bicCode</con:name><con:value>ESSEDE5F550</con:value></con:property><con:property><con:name>blzCode</con:name><con:value>55010800</con:value></con:property><con:property><con:name>ort</con:name><con:value>Mainz a Rhein</con:value></con:property><con:property><con:name>plz</con:name><con:value>55116</con:value></con:property></con:properties></con:config></con:testStep><con:properties><con:property><con:name>blzCode</con:name><con:value>55010800</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="71a5850a-27bf-4bda-a7f6-d6c5ea783dd2" name="TS02-Test Suite for supplier service"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1bfa3763-365c-4c8d-a18c-fe4c920c1e85" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01" searchProperties="true"><con:settings/><con:testStep type="request" id="3ce4a936-20c3-416d-8d53-aa4c805cd0dd" name="GetSupplierByZipCode - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MediCareSupplierSoap</con:interface><con:operation>GetSupplierByZipCode</con:operation><con:request name="GetSupplierByZipCode - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c993a76c-767c-4d2f-b326-8db9e0c708d9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <web:GetSupplierByZipCode>\r
-         <!--Optional:-->\r
-         <web:zip>75070</web:zip>\r
-      </web:GetSupplierByZipCode>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="e2661f1e-8fd3-46bc-b225-078f2e9985b3" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
-declare namespace ns1='http://www.webservicex.net/';
- count(//ns1:GetSupplierByZipCodeResponse/ns1:SupplierDataLists/ns1:SupplierDatas/ns1:SupplierData[ns1:ZipPlus4='75070'])</path><content>13</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="7b1d1521-7ad6-40d6-8c38-7f16990508cc" name="SOAP Response"/><con:assertion type="XQuery Match" id="983a4956-dfec-4082-b8bc-d901b6135212" name="XQuery Match"><con:configuration><path><![CDATA[declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
-declare namespace ns1='http://www.webservicex.net/';
-<test>
-{
-for $supplier in //ns1:SupplierData
-return
-<testsupplier>
-<zip>{data($supplier/ns1:ZipPlus4/text())}</zip>
-<city>{data($supplier/ns1:City/text())}</city>
-</testsupplier>
+//ns1:getBankResponse/ns1:details/ns1:plz</con:sourcePath><con:targetType>plz</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="823c9db9-879a-4149-8118-3c8210179f84"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>bicCode</con:name><con:value>ESSEDE5F550</con:value></con:property><con:property><con:name>blzCode</con:name><con:value>55010800</con:value></con:property><con:property><con:name>ort</con:name><con:value>Mainz a Rhein</con:value></con:property><con:property><con:name>plz</con:name><con:value>55116</con:value></con:property></con:properties></con:config></con:testStep><con:properties><con:property><con:name>blzCode</con:name><con:value>55010800</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="71a5850a-27bf-4bda-a7f6-d6c5ea783dd2" name="TS02-Test Suite for supplier service"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1bfa3763-365c-4c8d-a18c-fe4c920c1e85" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01" searchProperties="true"><con:settings/><con:testStep type="request" id="3ce4a936-20c3-416d-8d53-aa4c805cd0dd" name="Test"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MediCareSupplierSoap</con:interface><con:operation>GetSupplierByZipCode</con:operation><con:request name="Test" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c993a76c-767c-4d2f-b326-8db9e0c708d9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/medicareSupplier.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetSupplierByZipCode>
+         <!--Optional:-->
+         <web:zip>75071</web:zip>
+      </web:GetSupplierByZipCode>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7b1d1521-7ad6-40d6-8c38-7f16990508cc" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierByZipCode"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="40aeceaf-3264-4129-8604-223478424a8b"><con:settings/><con:config><script>
+
+
+
+
+
 }
-</test>]]></path><content><![CDATA[<test>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MC KINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MC KINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MC KINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MC KINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MC KINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-  <testsupplier>
-    <zip>75070</zip>
-    <city>MCKINNEY</city>
-  </testsupplier>
-</test>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>true</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetSupplierByZipCode"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="27404165-da54-47e0-b794-89b2066d20b5" name="TS03-Groovy Automation"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="33be7193-c41a-45bd-9f30-9e8f6ec33551" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01_Data Type ,Log,$" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Data Types" id="5359e4cf-77a5-42ed-8982-f4826a40dfea"><con:settings/><con:config><script>def name
+
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="27404165-da54-47e0-b794-89b2066d20b5" name="TS03-Groovy Automation"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="33be7193-c41a-45bd-9f30-9e8f6ec33551" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC01_Data Type ,Log,$" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Data Types" id="5359e4cf-77a5-42ed-8982-f4826a40dfea"><con:settings/><con:config><script>def name
 String firstName
 int age
 double salary
@@ -1161,7 +1105,7 @@ actual='jhon'
 
 fruits = ['apple','banana']
 
-assert true == fruits.contains('Mango'),"My unique Message"</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3f172781-3eeb-4cd5-9f5a-a239a3b4defe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC06-testRunner.testCase.testSuite.project.workspace.name" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="0b6f3fac-1b98-4613-befd-d1a051959d30"><con:settings/><con:config><script>//test case name
+assert true == fruits.contains('banana'),"My unique Message"</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3f172781-3eeb-4cd5-9f5a-a239a3b4defe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC06-testRunner.testCase.testSuite.project.workspace.name" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="0b6f3fac-1b98-4613-befd-d1a051959d30"><con:settings/><con:config><script>//test case name
 log.info testRunner.testCase.name
 
 //test suite name
@@ -1190,31 +1134,47 @@ tsEntry ->
 log.info tsEntry.key 
 }
 </script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f731dae8-efa3-462f-b2ae-72cad161b410" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC07-import groovy.util.XmlSlurper" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="a3004d7e-b75e-4e00-ac02-88320caad94c"><con:settings/><con:config><script>import groovy.util.XmlSlurper
-//Define Test Step
-//Define xmlslurper
+import com.eviware.soapui.support.GroovyUtils
+def requestXmlHolder,responseXmlHolder
+def groovyUtils= new GroovyUtils(context)
 
- //testRunner
- //run(testRunner,context)
- //contentASXml
- 
-def testStepName='getBank'
 def xml = new XmlSlurper()
+//Read the bank service data from file
+File file = new File("C:\\Users\\ab42596\\Desktop\\blz-service-data.txt")
+def blzcode
+file.eachLine{
+	line ->
+	//log.info line
+	def l = line.split(',')
+	blzcode= l[0] // blzcode
+	fbezeichnung=l[1]
 
-def testStep=testRunner.testCase.getTestStepByName(testStepName)
-def response=testStep.run(testRunner,context)
+//updating the request with blzcode
+requestXmlHolder=groovyUtils.getXmlHolder("getBank#Request")
+requestXmlHolder["//blz:blz"]=blzcode
+requestXmlHolder.updateProperty()
 
+def response=testRunner.testCase.getTestStepByName('getBank').run(testRunner,context)
 
 def Envelope=xml.parseText(response.responseContentAsXml)
 log.info Envelope
-log.info Envelope.Body.getBankResponse.details.bic
+def respbezeichnung= Envelope.Body.getBankResponse.details.bezeichnung
 
-</script></con:config></con:testStep><con:testStep type="request" id="392e2b4e-ce4e-440a-9774-00fdb61954b3" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71aa8b0c-bfdf-4c05-9a0b-7b8b70f41abc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <blz:getBank>\r
-         <blz:blz>55010111</blz:blz>\r
-      </blz:getBank>\r
-   </soapenv:Body>\r
+//Assert expected == actual,"$variable"
+
+assert respbezeichnung == fbezeichnung,"$blzcode"
+}
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="request" id="392e2b4e-ce4e-440a-9774-00fdb61954b3" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71aa8b0c-bfdf-4c05-9a0b-7b8b70f41abc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.thomas-bayer.com/axis2/services/BLZService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <blz:getBank>
+         <blz:blz>55020500</blz:blz>
+      </blz:getBank>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="14f47160-e6cf-4b81-8989-21bef55fc8b8" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://thomas-bayer.com/blz/BLZServicePortType/getBankRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ddd385e9-6b5e-49b4-bf9d-5c86ecd8f3cd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC08-Working With File" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="67545314-47dd-4f7b-80ce-cffb67b2ddee"><con:settings/><con:config><script>File file = new File("C:\\Users\\ab42596\\Desktop\\blz-service-data.txt")
 //eacLine
 //line
@@ -1257,7 +1217,7 @@ testRunner.testCase.getTestStepByName('getBank').run(testRunner,context)
 responseXmlHolder=groovyUtils.getXmlHolder("getBank#Response")
 def test= responseXmlHolder["//ns1:bezeichnung"]
 log.info " $blzcode : $fbezeichnung"
-assert test == fbezeichnung,"$blzcode"
+assert test == fbezeichnung
 //write assertion
 }
 
@@ -1270,7 +1230,7 @@ assert test == fbezeichnung,"$blzcode"
 
 
 
-</script></con:config></con:testStep><con:testStep type="request" id="339c9af3-934b-471e-a349-4a1a4897bee2" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5abab871-ebb5-475f-a52d-8684e257dad7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/BLZLocalService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">
+</script></con:config></con:testStep><con:testStep type="request" id="339c9af3-934b-471e-a349-4a1a4897bee2" name="getBank"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BLZServiceSOAP11Binding</con:interface><con:operation>getBank</con:operation><con:request name="getBank" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5abab871-ebb5-475f-a52d-8684e257dad7"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.thomas-bayer.com/axis2/services/BLZService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:blz="http://thomas-bayer.com/blz/">
    <soapenv:Header/>
    <soapenv:Body>
       <blz:getBank>
